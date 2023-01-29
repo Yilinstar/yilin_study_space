@@ -1,0 +1,20 @@
+dim(x)  #获取或设置指定矩阵、数组或 DataFrame 的维数
+
+head(x, n)  #获取向量、矩阵、表、 DataFrame 或函数的第一部分, n:要打印的行数
+
+as.character(x) #把数字型变量转化成字符型
+
+#字符串的截取
+substr(s, first, last)  #first 和 last 分别设置截取的起始位置，均不可省略
+substring(s, first, last = 1000000)   #可以只设置first参数，last参数缺省时则默认为1000000，指字符串的最大长度
+
+paste(x, sep=" ", collapse=null)  #sep: 分隔符; collapse: 对于向量等, sep 会无效，则需要用它
+
+read.csv(file, header, sep, dec) 
+  #header：如果为 TRUE，则 read.csv() 假定您的文件具有标题行，因此第 1 行是每列的名称。如果不是， header = FALSE
+  #na.strings： 数集中缺失的类型用什么来表示，默认情况下，将读为NA
+  #StringsFactors： 表示读入的数据，对于字符类型，是否自动处理为因子类型
+  #data.table: TRUE 设置返回为data.table ，FALSE设置返回为 data.frame
+
+colnames(x)
+

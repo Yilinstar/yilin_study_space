@@ -1,0 +1,43 @@
+dim(x)  #获取或设置指定矩阵、数组或 DataFrame 的维数
+
+head(x, n)  #获取向量、矩阵、表、 DataFrame 或函数的第一部分, n:要打印的行数
+
+as.character(x) #把数字型变量转化成字符型
+
+#字符串的截取
+substr(s, first, last)  #first 和 last 分别设置截取的起始位置，均不可省略
+substring(s, first, last = 1000000)   #可以只设置first参数，last参数缺省时则默认为1000000，指字符串的最大长度
+
+paste(x, sep=" ", collapse=null)  #sep: 分隔符; collapse: 对于向量等, sep 会无效，则需要用它
+
+read.csv(file, header, sep, dec) 
+  #header：如果为 TRUE，则 read.csv() 假定您的文件具有标题行，因此第 1 行是每列的名称。如果不是， header = FALSE
+  #na.strings： 数集中缺失的类型用什么来表示，默认情况下，将读为NA
+  #StringsFactors： 表示读入的数据，对于字符类型，是否自动处理为因子类型
+  #data.table: TRUE 设置返回为data.table ，FALSE设置返回为 data.frame
+
+colnames(x)
+
+is.na(x)  #查看数据对象中是否包含缺失值NA、返回逻辑判断向量或者矩阵（logical vector/matrix）
+
+#逻辑符&运算符
+|   称为元素逻辑或运算符。 它将第一向量的每个元素与第二向量的相应元素组合，如果有一个元素为真，则给出输出TRUE。
+!   称为逻辑非运算符。 取得向量的每个元素，并给出相反的逻辑值。
+||  称为逻辑OR运算符。 取两个向量的第一个元素，如果其中一个为TRUE，则给出TRUE
+# 运算符学习  https://zhuanlan.zhihu.com/p/491248884
+
+mode()  #输出一个R对象的基本数据类型（模式）--包括数值型、字符型、布尔型、复数型（虚数）和原生型（字节）
+str()   #输出一个R对象的结构 -- 向量、矩阵、数组、数据框、因子、列表
+class() #抽象类型 -- 抽象类型
+
+as.date #将字符串转换为规范的Date对象
+
+iselse(test, yes, no) #条件判断:可以得到多个逻辑结果，有多少个逻辑结果，ifelse()的返回值就有多少个元素，且不同的逻辑结果取不同的值. e.g. 条件可以为向量
+is() else() #只得到一个逻辑结果（如果有多个逻辑结果，会自动取第一个，并抛出警告。 e.g. 若条件为向量，只识别向量的第一个元素
+iselse(test1, yes, 
+      iselse(test2, yes, no))  #嵌套条件
+      
+
+
+
+
